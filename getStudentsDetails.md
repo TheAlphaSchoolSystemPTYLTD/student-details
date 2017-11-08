@@ -1,6 +1,6 @@
-**getStudentDetails**
+**getStudentsDetails**
 ----
-  Returns a structured Student data comprising general, school, boarder, and mceecdya details in JSON format.
+  Returns an array of structured Student data comprising general, school, and other school details in JSON format.
 
 * **Version:**
 
@@ -14,9 +14,11 @@
 
    **Required:**
 
-   `code [string]` - Student code
+   `currentstatus [string]` -  Must be 'current' or 'future' or 'past' or 'noncurrent'
    
    **Optional:**
+
+   `code [string]` - Student code
    
    `includephoto [boolean]` -  Must be 'true' or 'false' for whether returning student photo.
 
@@ -34,10 +36,17 @@
  
 * **Error Response:**
 
-    `code` not supplied
+    `currentstatus` not supplied
     ```javascript
     __invalid: {
-      "code": "field is required"
+      "currentstatus": "field is required"
+    }
+    ```
+
+    `currentstatus` not be 'current' or 'future' or 'past' or 'noncurrent'
+    ```javascript
+    __invalid: {
+      "currentstatus": "Current Status must be 'current' or 'future' or 'past' or 'noncurrent'."
     }
     ```
 
@@ -66,6 +75,7 @@
 
   ```javascript
     { 
+      "currentstatus":"current",
       "code":"0009130",
       "includephoto":"true",
       "thumbnail":"true"
@@ -75,14 +85,14 @@
 * **Sample GET:** (With URL Encoded `token`)
 
   ```HTML
-    http://api.tasscloud.com.au/tassweb/api/?method=getStudentDetails&appcode=DEMOSD&company=10&v=2&token=???????
+    http://api.tasscloud.com.au/tassweb/api/?method=getStudentsDetails&appcode=DEMOSD&company=10&v=2&token=???????
   ```
   
 * **Sample POST:**
 
   ```HTML
     <form id="postForm" name="postForm" method="POST" action="http://api.tasscloud.com.au/api/">
-       <input type="hidden" name="method" value="getStudentDetails">
+       <input type="hidden" name="method" value="getStudentsDetails">
        <input type="hidden" name="appcode" value="DEMOSD">
        <input type="hidden" name="company" value="10">
        <input type="hidden" name="v" value="2">
