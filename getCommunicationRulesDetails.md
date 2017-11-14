@@ -1,6 +1,6 @@
 **getCommunicationRulesDetails**
 ----
-  Returns an array of structured Communication Rules data comprising parent and address details in JSON format.
+  Returns an array of structured Communication Rules data in JSON format.
 
 * **Version:**
 
