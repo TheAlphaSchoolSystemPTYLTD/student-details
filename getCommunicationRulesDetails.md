@@ -40,8 +40,8 @@
 
     ```javascript
       "commrules": [
-        {
-          "1": {
+        [
+          {
             "communication_type": "ACA,ATT,EC,GEN,LW,TK,TKCO",
             "mobile_phone_2": "",
             "adressee": "Joan Angus",
@@ -51,6 +51,7 @@
             "sms_flg_1": "N",
             "email": "angus@somewhere.com.au",
             "business_phone": "848 2256",
+            "parent_code": 10010,
             "current_address": "Ms. J. Angus<br />U 4/6 Emerald St<br />KEDRON QLD 4031",
             "salutation": "Ms Angus",
             "home_phone": "3366 2541 Mobile: 015 667 8349",
@@ -58,7 +59,7 @@
             "tag": "Student Lives With / Emergency Contact",
             "facsimile": "848 4444"
           },
-          "2": {
+          {
             "communication_type": "ACA,ATT,EC,GEN,LW,TK,TKCO",
             "mobile_phone_2": "",
             "adressee": "Ronald Angus",
@@ -68,6 +69,7 @@
             "sms_flg_1": "N",
             "email": "angusr@somewhere.com.au",
             "business_phone": "3987 2345",
+            "parent_code": 10010,
             "current_address": "Mr. Ronald Angus<br />23 Pilliga St<br />WAVELL HEIGHTS QLD 4012",
             "salutation": "Mr R Angus",
             "home_phone": "3212 4567",
@@ -75,7 +77,7 @@
             "tag": "Student Lives With / Emergency Contact",
             "facsimile": "3987 5432"
           },
-          "3": {
+          {
             "communication_type": "GEN,TK,TKCO",
             "mobile_phone_2": "",
             "adressee": "Ms. J. Angus ",
@@ -85,6 +87,7 @@
             "sms_flg_1": "Y",
             "email": "clarks@somewhere.com.au",
             "business_phone": "848 2256",
+            "parent_code": 10010,
             "current_address": "Ms. J. Angus<br />PO Box 3088<br />CHERMSIDE WEST QLD 4032",
             "salutation": "Ms Angus",
             "home_phone": "3366 2541 Mobile: 015 667 8349",
@@ -92,7 +95,7 @@
             "tag": "",
             "facsimile": "848 4444"
           }
-        }
+        ]
       ]
     ```
  

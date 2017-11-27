@@ -4,4 +4,4 @@ Student Details API
 **Methods**
 
   * getStudentDetails
-  * getParentAddressDetails
+  * getCommunicationRulesDetails
