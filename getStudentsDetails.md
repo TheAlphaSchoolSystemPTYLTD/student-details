@@ -36,7 +36,7 @@
           "general_details": {
             "surname": "Angus",
             "next_year_indicator": "Advancing",
-            "date_of_eaving": "",
+            "date_of_leaving": "",
             "student_code": 20073,
             "usi": "",
             "mobile_phone": "                              ",
