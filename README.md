@@ -3,5 +3,5 @@ Student Details API
 
 **Methods**
 
-  * getStudentDetails
+  * getStudentsDetails
   * getCommunicationRulesDetails
