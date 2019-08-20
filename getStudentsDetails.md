@@ -39,7 +39,7 @@
             "date_of_leaving": "",
             "student_code": 20073,
             "usi": "",
-            "mobile_phone": "                              ",
+            "mobile_phone": "",
             "lui_number": "",
             "entry_year_group": 8,
             "religion": "Anglican",
