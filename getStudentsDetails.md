@@ -24,6 +24,14 @@
 
    `thumbnail [boolean]` -  Must be 'true' or 'false' for whether returning student thumbnail photo.
 
+   `campus [string]` -  Campus Code.
+
+   `pc_tutor_group [string]` -  Totor Group Code.
+
+   `class [string]` -  Class.
+
+   `year_group [string]` -  Year Group.
+
    **Conditional:**
  
    none
@@ -42,6 +50,8 @@
             "mobile_phone": "                              ",
             "lui_number": "",
             "entry_year_group": 8,
+            "par_code": "002082",
+            "sms_flg": "N",
             "religion": "Anglican",
             "preferred_name": "Paul",
             "gender": "Male",
@@ -122,6 +132,34 @@
     ```javascript
     __invalid: {
       "thumbnail": "Value is not a valid boolean."
+    }
+    ```
+
+    `campus` not a valid campus code
+    ```javascript
+    __invalid: {
+      "campus": "Invalid campus [campus]."
+    }
+    ```
+
+    `pc_tutor_group` not a valid tutor group
+    ```javascript
+    __invalid: {
+      "campus": "Invalid pc_tutor_group [pc_tutor_group]."
+    }
+    ```
+
+    `class` not a valid class
+    ```javascript
+    __invalid: {
+      "campus": "Invalid class [class]."
+    }
+    ```
+
+    `year_group` not a valid year group
+    ```javascript
+    __invalid: {
+      "campus": "Invalid year_group [year_group]."
     }
     ```
     
