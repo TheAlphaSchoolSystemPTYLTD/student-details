@@ -5,6 +5,10 @@
 * **Version:**
 
   2
+  
+* **Version History:**
+
+  New Property `addressee` added in Version 51.4. Erroneous `adressee` field is depreciated and will be removed in a future version.
 
 * **Method:**
 
@@ -26,11 +30,11 @@
 
    `campus [string]` -  Campus Code.
 
-   `pc_tutor_group [string]` -  Totor Group Code.
+   `pc_tutor_group [string]` -  Tutor Group Code.
 
-   `class [string]` -  Class.
+   `class [string]` -  Student Class.
 
-   `year_group [string]` -  Year Group.
+   `year_group [string]` -  Numeric Year Group Value.
 
    **Conditional:**
  
