@@ -8,7 +8,7 @@
   
 * **Version History:**
 
-  New Property `addressee` added in Version 51.4. Erroneous `adressee` field is depreciated and will be removed in a future version.
+  TASS v51.4 - New Property addressee added. Erroneous adressee field is depreciated and will be removed in a future version. Added three optional params: [pc_tutor_group], [class], [year_group];
 
 * **Method:**
 
