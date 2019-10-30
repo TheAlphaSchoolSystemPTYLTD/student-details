@@ -5,6 +5,10 @@
 * **Version:**
 
   2
+    
+* **Version History:**
+
+  New Property `addressee` added in Version 51.4. Erroneous `adressee` field is depreciated and will be removed in a future version.
 
 * **Method:**
 
