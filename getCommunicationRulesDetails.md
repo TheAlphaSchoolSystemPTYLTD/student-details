@@ -5,6 +5,10 @@
 * **Version:**
 
   2
+  
+* **Version History:**
+
+  New Property `email_2` added in Version 51.4 (PR4).
 
 * **Method:**
 
@@ -52,6 +56,7 @@
                "mobile_phone_1":"",
                "sms_flg_1":"N",
                "email":"angus@somewhere.com.au",
+               "email_2":"angus2@somewhere.com.au",
                "business_phone":"848 2256",
                "parent_code":10010,
                "current_address":"Ms. J. Angus<br \/>U 4\/6 Emerald St<br \/>KEDRON QLD 4031",
@@ -71,6 +76,7 @@
                "mobile_phone_1":"",
                "sms_flg_1":"N",
                "email":"angusr@somewhere.com.au",
+               "email_2":"",
                "business_phone":"3987 2345",
                "parent_code":10010,
                "current_address":"Mr. Ronald Angus<br \/>23 Pilliga St<br \/>WAVELL HEIGHTS QLD 4012",
@@ -90,6 +96,7 @@
                "mobile_phone_1":"0413443650",
                "sms_flg_1":"Y",
                "email":"clarks@somewhere.com.au",
+               "email_2":"",
                "business_phone":"848 2256",
                "parent_code":10010,
                "current_address":"Ms. J. Angus<br \/>PO Box 3088<br \/>CHERMSIDE WEST QLD 4032",
