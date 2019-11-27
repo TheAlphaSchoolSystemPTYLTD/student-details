@@ -1,40 +1,44 @@
 **getStudentsDetails**
 ----
-  Returns an array of structured Student data comprising general, school, and other school details in JSON format.
+	Returns an array of structured Student data comprising general, school, and other school details in JSON format.
+
+* **Version HIstory:**
+
+  TASS v52.0 - Return 3 new fields `preferred_surname`, `first_name`, `other_name` in general_details.
 
 * **Version:**
 
-  2
+	2
 
 * **Method:**
 
-  `GET | POST`
-  
+	`GET | POST`
+
 *  **Params:**
 
-   **Required:**
+	**Required:**
 
-   `currentstatus [string]` -  Must be 'current' or 'future' or 'past' or 'noncurrent'
-   
-   **Optional:**
+	`currentstatus [string]` -  Must be 'current' or 'future' or 'past' or 'noncurrent'
 
-   `code [string]` - Student code
-   
-   `includephoto [boolean]` -  Must be 'true' or 'false' for whether returning student photo.
+	**Optional:**
 
-   `thumbnail [boolean]` -  Must be 'true' or 'false' for whether returning student thumbnail photo.
+	`code [string]` - Student code
 
-   `campus [string]` -  Campus Code.
+	`includephoto [boolean]` -  Must be 'true' or 'false' for whether returning student photo.
 
-   `pc_tutor_group [string]` -  Tutor Group Code.
+	`thumbnail [boolean]` -  Must be 'true' or 'false' for whether returning student thumbnail photo.
 
-   `class [string]` -  Student Class.
+	`campus [string]` -  Campus Code.
 
-   `year_group [string]` -  Numeric Year Group Value.
+	`pc_tutor_group [string]` -  Tutor Group Code.
 
-   **Conditional:**
- 
-   none
+	`class [string]` -  Student Class.
+
+	`year_group [string]` -  Numeric Year Group Value.
+
+	**Conditional:**
+
+	none
 
 * **Success Response:**
 
@@ -47,6 +51,8 @@
             "date_of_leaving": "",
             "student_code": 20073,
             "usi": "",
+            "preferred_surname": "Angus",
+            "first_name": "Paul",
             "mobile_phone": "                              ",
             "lui_number": "",
             "entry_year_group": 8,
@@ -54,6 +60,7 @@
             "sms_flg": "N",
             "religion": "Anglican",
             "preferred_name": "Paul",
+            "other_name": "",
             "gender": "Male",
             "date_of_entry": "19/01/1998",
             "student_photo": {
@@ -166,7 +173,7 @@
 * **Sample Parameters:**
 
   ```javascript
-    { 
+    {
       "currentstatus":"current",
       "code":"20073",
       "includephoto":"true",
