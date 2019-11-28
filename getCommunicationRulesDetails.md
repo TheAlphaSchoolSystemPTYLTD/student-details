@@ -1,14 +1,18 @@
 **getCommunicationRulesDetails**
 ----
   Returns an array of structured Communication Rules data including student code and addresses in JSON format.
+    
+* **Version History:**
+
+  TASS v51.4 - Add a new Property `addressee`. Erroneous `adressee` field is depreciated and will be removed in a future version.
+
+  TASS v51.4 (PR4) - New Property `email_2` added.
+
+  TASS v52.0 - Return 16 new fields `m_description`, `m_title`, `m_initials`, `m_surname`, `m_first_name`, `m_other_name`, `m_preferred_name`, `m_suffix`, `f_description`, `f_title`, `f_initials`, `f_surname`, `f_first_name`, `f_other_name`, `f_preferred_name`, `f_suffix` for each address.
 
 * **Version:**
 
   2
-    
-* **Version History:**
-
-  New Property `addressee` added in Version 51.4. Erroneous `adressee` field is depreciated and will be removed in a future version.
 
 * **Method:**
 
@@ -43,70 +47,57 @@
 * **Success Response:**
 
     ```javascript
-      "commrules":[  
-        {  
-          "addresses":[  
-            {  
-               "communication_type":"ACA,ATT,EC,GEN,LW,TK,TKCO",
-               "mobile_phone_2":"",
-               "adressee":"Joan Angus",
-               "addressee":"Joan Angus",
-               "sms_flg_2":"N",
-               "address_description":"Parent\/Caregiver 1",
-               "mobile_phone_1":"",
-               "sms_flg_1":"N",
-               "email":"angus@somewhere.com.au",
-               "business_phone":"848 2256",
-               "parent_code":10010,
-               "current_address":"Ms. J. Angus<br \/>U 4\/6 Emerald St<br \/>KEDRON QLD 4031",
-               "salutation":"Ms Angus",
-               "home_phone":"3366 2541 Mobile: 015 667 8349",
-               "relationship":"Biological",
-               "tag":"Student Lives With \/ Emergency Contact",
-               "facsimile":"848 4444"
-            },
-            {  
-               "communication_type":"ACA,ATT,EC,GEN,LW,TK,TKCO",
-               "mobile_phone_2":"",
-               "adressee":"Ronald Angus",
-               "addressee":"Ronald Angus",
-               "sms_flg_2":"N",
-               "address_description":"Parent\/Caregiver 2",
-               "mobile_phone_1":"",
-               "sms_flg_1":"N",
-               "email":"angusr@somewhere.com.au",
-               "business_phone":"3987 2345",
-               "parent_code":10010,
-               "current_address":"Mr. Ronald Angus<br \/>23 Pilliga St<br \/>WAVELL HEIGHTS QLD 4012",
-               "salutation":"Mr R Angus",
-               "home_phone":"3212 4567",
-               "relationship":"Biological",
-               "tag":"Student Lives With \/ Emergency Contact",
-               "facsimile":"3987 5432"
-            },
-            {  
-               "communication_type":"GEN,TK,TKCO",
-               "mobile_phone_2":"",
-               "adressee":"Ms. J. Angus ",
-               "addressee":"Ms. J. Angus ",
-               "sms_flg_2":"N",
-               "address_description":"Correspondence",
-               "mobile_phone_1":"0413443650",
-               "sms_flg_1":"Y",
-               "email":"clarks@somewhere.com.au",
-               "business_phone":"848 2256",
-               "parent_code":10010,
-               "current_address":"Ms. J. Angus<br \/>PO Box 3088<br \/>CHERMSIDE WEST QLD 4032",
-               "salutation":"Ms Angus",
-               "home_phone":"3366 2541 Mobile: 015 667 8349",
-               "relationship":"",
-               "tag":"",
-               "facsimile":"848 4444"
-            }
-          ],
-          "studcode":20073
+      {
+        "commrules": [
+          {
+            "addresses": [
+              {
+                "communication_type": "EC,GEN,LW,TKCO",
+                "mobile_phone_2": "",
+                "adressee": "Paula Clark",
+                "sms_flg_2": "N",
+                "m_initials": "P",
+                "m_suffix": "suf",
+                "m_surname": "Clark",
+                "m_description": "Mother/Parent 1",
+                "m_preferred_name": "Paula",
+                "m_other_name": "PauOth",
+                "m_title": "Mrs",
+                "m_first_name": "Paula",
+                "address_description": "Mother/Parent 1",
+                "email_2": "",
+                "mobile_phone_1": "0427203657",
+                "sms_flg_1": "Y",
+                "f_initials": "E",
+                "f_suffix": "",
+                "f_surname": "Clark",
+                "f_description": "Father/Parent 2",
+                "f_preferred_name": "Edward",
+                "f_other_name": "",
+                "f_title": "",
+                "f_first_name": "Edward",
+                "addressee": "Paula Clark",
+                "email": "peterr@tassweb.com.au; realripper@tpg.com.au",
+                "business_phone": "3201 1302",
+                "parent_code": "000055",
+                "current_address": "Mrs P Clarké Second Line<br />123 Smith Rd<br />the bag end of nowhere<br />ALBION NT 4005<br />AUSTRALIA",
+                "salutation": "Mrs Clark (Mother 6)",
+                "home_phone": "3870 9987",
+                "relationship": "Step",
+                "tag": "Student Lives With / Emergency Contact",
+                "facsimile": "375575756576"
+              }
+            ],
+            "studcode": "0009130"
+          }
+        ],
+        "token": {
+          "code": "0009130",
+          "commtype": "all",
+          "timestamp": "{ts '2019-11-27 14:17:27'}",
+          "currentstatus": "current"
         }
-      ]
+      }
     ```
  
 * **Error Response:**
