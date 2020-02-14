@@ -12,7 +12,11 @@
 
 * **Version:**
 
-  2
+  3
+
+* **Permission:**
+
+  Student Records > Students > View
 
 * **Method:**
 

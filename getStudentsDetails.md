@@ -10,7 +10,11 @@
 
 * **Version:**
 
-	2
+	3
+
+* **Permission:**
+
+  Student Record > Students > View
 
 * **Method:**
 
