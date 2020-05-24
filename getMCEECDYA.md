@@ -36,67 +36,65 @@
 
     ```javascript
     {
-        "FOCC_CODE":{
-            "code":"FOCC_CODE",
-            "desc":9
-        },
-        "MLOTE_CODE":{
-            "code":"MLOTE_CODE",
-            "desc":9302
-        },
-        "FSE_CODE":{
-            "code":"FSE_CODE",
-            "desc":0
-        },
-        "SLOTE_CODE":{
-            "code":"SLOTE_CODE",
-            "desc":9301
-        },
-        "UPDATE_BY":{
-            "code":"UPDATE_BY",
-            "desc":"fang"
-        },
-        "MOCC_CODE":{
-            "code":"MOCC_CODE",
-            "desc":9
-        },
-        "SCOB_CODE":{
-            "code":"SCOB_CODE",
-            "desc":8000
-        },
-        "ARRIVE_YR":{
-            "code":"ARRIVE_YR",
-            "desc":2014
-        },
-        "S_INDIG_STS":{
-            "code":"S_INDIG_STS",
-            "desc":9
-        },
-        "FLOTE_CODE":{
-            "code":"FLOTE_CODE",
-            "desc":9303
-        },
-        "MSE_CODE":{
-            "code":"MSE_CODE",
-            "desc":0
-        },
-        "MNSE_CODE":{
-            "code":"MNSE_CODE",
-            "desc":0
-        },
-        "FNSE_CODE":{
-            "code":"FNSE_CODE",
-            "desc":0
-        },
-        "token":{
-            "timestamp":"{ts '2020-05-22 08:31:45'}",
-            "studcode":"0021218"
-        },
-        "UPDATE_ON":{
-            "code":"UPDATE_ON",
-            "desc":"2020-05-21 00:00:00.0"
-        }
-    }
+      "student":{
+          "S_INDIG_STS":{
+              "code":9,
+              "desc":"Unknown"
+          },
+          "SLOTE_CODE":{
+              "code":9301,
+              "desc":"Fijian"
+          },
+          "SCOB_CODE":{
+              "code":8000,
+              "desc":"AMERICAS"
+          },
+          "ARRIVE_YR":{
+              "code":2014,
+              "desc":"ARRIVE_YR"
+          }
+      },
+      "parent1":{
+          "MLOTE_CODE":{
+              "code":9302,
+              "desc":"Gilbertese"
+          },
+          "MSE_CODE":{
+              "code":0,
+              "desc":"Not stated/unknown"
+          },
+          "MNSE_CODE":{
+              "code":0,
+              "desc":"Not stated/unknown"
+          },
+          "MOCC_CODE":{
+              "code":9,
+              "desc":9
+          }
+      },
+      "parent2":{
+          "FOCC_CODE":{
+              "code":9,
+              "desc":9
+          },
+          "FSE_CODE":{
+              "code":0,
+              "desc":"Not stated/unknown"
+          },
+          "FLOTE_CODE":{
+              "code":9303,
+              "desc":"Maori (Cook Island)"
+          },
+          "FNSE_CODE":{
+              "code":0,
+              "desc":"Not stated/unknown"
+          }
+      },
+      "token":{
+          "timestamp":"{ts '2020-05-25 09:02:16'}",
+          "studcode":"0021218"
+      }
+  }
     ```
  
 * **Error Response:**
