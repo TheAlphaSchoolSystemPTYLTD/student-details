@@ -6,6 +6,8 @@
 
   TASS v52.3 - Method Added
 
+  TASS v53.3 PR TBD - Add a new conditional field `currentstatus`, change the required field `studcode` to a conditional field. Add new validations for `studcode` and `currentstatus`.
+
 * **Version:**
 
   3
@@ -22,7 +24,7 @@
 
    **Required:**
  
-   `studcode [string]` - Student Code
+   None
 
    **Optional:**
 
@@ -30,55 +32,132 @@
 
    **Conditional:**
 
-   None
+    `currentstatus [string]` - Required if `studcode` is not supplied. Must be 'current' or 'future' or 'past' or 'noncurrent'.
+
+    `studcode [string]` - Required if `currentstatus` is not supplied. Contains Only One Student Code if supplied.
 
 * **Success Response:**
 
+    when `studcode` is supplied
     ```javascript
-    { 
-       "asthma_usual_signs":{ 
-          "speak_flg":"N",
-          "breath_flg":"Y",
-          "wheez_flg":"Y",
-          "comm_text":"You can always tell when Andrea is having an Asthma attack.  First she starts wheezing like an old steam train.  This could go on for some time and become quite significant.  Sometimes she coughs x200",
-          "tight_flg":"Y",
-          "cough_flg":"N"
-       },
-       "asthma_triggers":{ 
-          "cold_virus_flg":"N",
-          "pollen_flg":"Y",
-          "food_text":"",
-          "food_flg":"Y",
-          "dust_flg":"N",
-          "comm_text":"Is partial to attacks in August, September, October, November, December and January.  However she is also prone to attacks in February, March, April, May, June and July.  The weather also impacts x200",
-          "exercise_flg":"Y"
-       },
-       "asthma_worsening_signs":{ 
-          "speak_flg":"N",
-          "breath_flg":"N",
-          "wheez_flg":"Y",
-          "comm_text":"You can tell that her Asthma is getting worse when she turns blue in the face.  It is really such a striking blue colour, you can't possible miss it.  She may also pass out and fall down.  You canx200",
-          "tight_flg":"N",
-          "cough_flg":"Y"
-       },
-       "token":{ 
-          "timestamp":"{ts '2020-02-14 10:25:48'}",
-          "studcode":"0009130"
-       }
+    {
+      "data": [
+        {
+          "asthma_usual_signs": {
+          "speak_flg": "N",
+          "breath_flg": "Y",
+          "wheez_flg": "Y",
+          "comm_text": "You can always tell when Andrea is having an Asthma attack.  First she starts wheezing like an old steam train.  This could go on for some time and become quite significant.  Sometimes she coughs x200",
+          "tight_flg": "Y",
+          "cough_flg": "N"
+        },
+          "asthma_triggers": {
+          "cold_virus_flg": "N",
+          "pollen_flg": "Y",
+          "food_text": "",
+          "food_flg": "Y",
+          "dust_flg": "N",
+          "comm_text": "Is partial to attacks in August, September, October, November, December and January.  However she is also prone to attacks in February, March, April, May, June and July.  The weather also impacts x200",
+          "exercise_flg": "Y"
+        },
+          "asthma_worsening_signs": {
+          "speak_flg": "N",
+          "breath_flg": "N",
+          "wheez_flg": "Y",
+          "comm_text": "You can tell that her Asthma is getting worse when she turns blue in the face.  It is really such a striking blue colour, you can't possible miss it.  She may also pass out and fall down.  You canx200",
+          "tight_flg": "N",
+          "cough_flg": "Y"
+          },
+          "studcode": "0009130"
+        }
+      ],
+      "__tassversion": "01.000.043.0",
+      "token": {
+        "timestamp": "{ts '2021-01-20 09:34:51'}",
+        "studcode": "0009130"
+      }
+    }
+    ```
+
+    when `currentstatus` is supplied
+    ```javascript
+    {
+      "data": [
+        {
+          "asthma_usual_signs": {},
+          "asthma_triggers": {},
+          "asthma_worsening_signs": {},
+          "error": "This student does not have asthma as a medical condition.",
+          "studcode": "0009129"
+        },
+        {
+          "asthma_usual_signs": {
+            "speak_flg": "N",
+            "breath_flg": "Y",
+            "wheez_flg": "Y",
+            "comm_text": "You can always tell when Andrea is having an Asthma attack.  First she starts wheezing like an old steam train.  This could go on for some time and become quite significant.  Sometimes she coughs x200",
+            "tight_flg": "Y",
+            "cough_flg": "N"
+          },
+          "asthma_triggers": {
+            "cold_virus_flg": "N",
+            "pollen_flg": "Y",
+            "food_text": "",
+            "food_flg": "Y",
+            "dust_flg": "N",
+            "comm_text": "Is partial to attacks in August, September, October, November, December and January.  However she is also prone to attacks in February, March, April, May, June and July.  The weather also impacts x200",
+            "exercise_flg": "Y"
+          },
+          "asthma_worsening_signs": {
+            "speak_flg": "N",
+            "breath_flg": "N",
+            "wheez_flg": "Y",
+            "comm_text": "You can tell that her Asthma is getting worse when she turns blue in the face.  It is really such a striking blue colour, you can't possible miss it.  She may also pass out and fall down.  You canx200",
+            "tight_flg": "N",
+            "cough_flg": "Y"
+          },
+        "studcode": "0009130"
+        },
+      ],
+      "__tassversion": "01.053.3.000",
+      "token": {
+        "timestamp": "{ts '2021-01-20 11:49:16'}",
+        "currentstatus": "current"
+      }
     }
     ```
  
 * **Error Response:**
 
-    `studcode` not supplied
+    `studcode` and `currentstatus` are both not supplied
     ```javascript
-      "error": "studcode is required."
+      "error": "studcode or currentstatus is required."
+    ```
+
+    `studcode` contains more than one student code
+    ```javascript
+      "error": "Only one studcode can be processed at a time."
+    ```
+
+    `studcode` does not exist in `currentstatus` student list
+    ```javascript
+      "error": "[studcode] is not a valid [currentstatus] student."
+    ```
+
+    `currentstatus` does not match 'current' or 'future' or 'past' or 'noncurrent'
+    ```javascript
+      "error": "[currentstatus] must be 'current' or 'future' or 'past' or 'noncurrent'."
     ```
 
 * **Sample Parameters:**
-
+    when `studcode` is supplied
   ```javascript
     {"studcode":"0009130"}
+  ```
+
+    when `currentstatus` is supplied
+  ```javascript
+    {"currentstatus":"current"}
   ```
 
 * **Sample GET:** (With URL Encoded `token`)

@@ -1,4 +1,4 @@
-**getMedicalPractitioners**
+**getMedicalPractitioner**
 ----
   Returns a structured student medical practitioner details data in JSON format.
   
@@ -24,7 +24,7 @@
  
    `studcode [string]` - Student Code
 
-   `prac_num [string]` - Practitioner Code
+   `prac_num [num]` - Practitioner Code
 
    **Optional:**
 
@@ -37,17 +37,18 @@
 * **Success Response:**
 
     ```javascript
-    { 
-       "ptype_code":"002",
-       "doct_phone":"",
-       "doct_name":"Dr Mary Jane Bellingham",
-       "ptype_desc":"Doctor",
-       "token":{ 
-          "timestamp":"{ts '2020-02-14 09:54:04'}",
-          "studcode":"0009130",
-          "prac_num":9
-       },
-       "prac_num":9
+    {
+      "ptype_code": "002",
+      "doct_phone": "3020 7900",
+      "doct_name": "Dr Mary Jane Bellingham",
+      "ptype_desc": "Doctor",
+      "prac_num": 9
+      "__tassversion": "01.053.3.000",
+      "token": {
+        "timestamp": "{ts '2021-01-20 16:21:20'}",
+        "studcode": "0009130",
+        "prac_num": 9
+      }
     }
     ```
  
@@ -66,7 +67,7 @@
 * **Sample Parameters:**
 
   ```javascript
-    {"studcode":"0009130","prac_num":"TY"}
+    {"studcode":"0009130","prac_num":"9"}
   ```
 
 * **Sample GET:** (With URL Encoded `token`)
