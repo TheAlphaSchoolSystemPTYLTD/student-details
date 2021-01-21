@@ -36,9 +36,10 @@
 
     ```javascript
       { 
+        "__tassversion": "01.053.3.000",
          "token":{ 
             "includelookups":true,
-            "timestamp":"{ts '2020-02-14 14:35:18'}"
+            "timestamp": "{ts '2021-01-21 13:13:07'}"
          },
          "ud":[ 
             { 
@@ -112,7 +113,7 @@
  
 * **Error Response:**
 
-    `code` not supplied
+    `includelookups` is not supplied
     ```javascript
       "__invalid": {
         "includelookups": "field is required"

@@ -6,6 +6,8 @@
 
   TASS v52.3 - Method Added
 
+  TASS v53.3 PR TBD - Add a new conditional field `currentstatus`, change the required field `studcode` to a conditional field. Add validation for `studcode` and `currentstatus`.
+
 * **Version:**
 
   3
@@ -22,7 +24,7 @@
 
    **Required:**
  
-   `studcode [string]` - Student Code
+   None
 
    **Optional:**
 
@@ -30,10 +32,13 @@
 
    **Conditional:**
 
-   None
+   `currentstatus [string]` - Required if `studcode` is not supplied. Must be 'current' or 'future' or 'past' or 'noncurrent'.
+ 
+   `studcode [string]` - Required if `currentstatus` is not supplied. Contains Only One Student Code if supplied.
 
 * **Success Response:**
 
+    when only `studcode` is supplied
     ```javascript
     { 
        "data":[ 
@@ -58,22 +63,97 @@
              "note_cat":"GEN"
           }
        ],
+       "__tassversion": "01.053.3.000",
        "token":{ 
-          "timestamp":"{ts '2020-02-14 15:05:56'}",
+          "timestamp":"{ts '2021-01-21 11:40:11'}",
           "studcode":"0009130"
        }
+    }
+    ```
+
+    when only `currentstatus` is supplied
+    ```javascript
+    {
+      "data": [
+        {
+          "studcode": "0009097",
+          "studnotes": [
+            {
+              "note_date": "2015-09-22 00:00:00.0",
+              "ncat_desc": "Discipline",
+              "note_text": "Eric has been suspended pending a police investigation into and attack over the weekend.",
+              "entry_code": "telerik",
+              "entry_date": "2015-09-22 00:00:00.0",
+              "attach_url": "",
+              "attach_id": "",
+              "note_cat": "DIS"
+            },
+            {
+              "note_date": "2006-01-11 00:00:00.0",
+              "ncat_desc": "Exchange",
+              "note_text": "This is certificate.",
+              "entry_code": "root",
+              "entry_date": "2006-01-11 00:00:00.0",
+              "attach_url": "inline-file.cfm?do=ui.web.note.attachment&note_cat=EXC&note_date=2006-01-11 00:00:00.0&note_num=&entity_type=S&entity_code=0009097&notetype=standard",
+              "attach_id": "B8432281-0E35-8601-B8EB514137C80C5D",
+              "note_cat": "EXC"
+            }
+          ]
+        },
+        {
+          "studcode": "0009112",
+          "studnotes": [
+            {
+              "note_date": "2005-10-28 00:00:00.0",
+              "ncat_desc": "Parental Advice",
+              "note_text": "Mrs Boyle sent this in.",
+              "entry_code": "ken",
+              "entry_date": "2005-10-28 00:00:00.0",
+              "attach_url": "inline-file.cfm?do=ui.web.note.attachment&note_cat=PAR&note_date=2005-10-28 00:00:00.0&note_num=&entity_type=S&entity_code=0009112&notetype=standard",
+              "attach_id": "35E42E0F-EBA2-CE0A-08AC9F376CEFA3F6",
+              "note_cat": "PAR"
+            }
+          ]
+        }
+      ],
+      "__tassversion": "01.053.3.000",
+      "token": {
+        "timestamp": "{ts '2021-01-21 11:41:25'}",
+        "currentstatus": "current"
+      }
     }
     ```
  
 * **Error Response:**
 
-    `studcode` not supplied
+    `studcode` and `currentstatus` are both not supplied
     ```javascript
-      "error": "studcode is required."
+      "error": "studcode or currentstatus is required."
+    ```
+
+    `studcode` contains more than one student code
+    ```javascript
+      "error": "Only one studcode can be processed at a time."
+    ```
+
+    `studcode` does not exist in `currentstatus` student list
+    ```javascript
+      "error": "[studcode] is not a valid [currentstatus] student."
+    ```
+
+    `currentstatus` does not match 'current' or 'future' or 'past' or 'noncurrent'
+    ```javascript
+      "error": "[currentstatus] must be 'current' or 'future' or 'past' or 'noncurrent'."
     ```
 
 * **Sample Parameters:**
 
+    when `currentstatus` is supplied
+  ```javascript
+    {"currentstatus":"current"}
+  ```
+
+    when `studcode` is supplied
   ```javascript
     {"studcode":"0009130"}
   ```
