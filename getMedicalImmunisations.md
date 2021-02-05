@@ -88,7 +88,7 @@
           "studcode":"0009096"
         }
       ],
-      "__tassversion":"01.000.043.0",
+      "__tassversion": "01.053.3.000",
       "token":{
         "timestamp":"{ts '2020-11-10 15:17:43'}",
         "currentstatus":"current"

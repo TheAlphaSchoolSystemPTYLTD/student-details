@@ -46,6 +46,7 @@
        "has_attachment":true,
        "file":"[Base64 encoded image string]",
        "file_name":"GLtest.txt",
+       "__tassversion":"01.053.3.000",
        "token":{ 
           "note_date":"2019-05-30 15:11:58.0",
           "timestamp":"{ts '2020-02-14 11:11:12'}",
@@ -81,7 +82,7 @@
 * **Sample Parameters:**
 
   ```javascript
-    {"studcode":"0009130","mcond_code":"AST","attach_id":"5F724726-E361-C720-A1160233A4E8893D"}
+    {"studcode":"0009130","note_cat":"APE","note_date":"2019-05-30 15:11:58.0","attach_id":"5D2779F0-C855-6569-A3268FF20A391ED0"}
   ```
 
 * **Sample GET:** (With URL Encoded `token`)

@@ -38,10 +38,11 @@
 
     ```javascript
       { 
+        "__tassversion": "01.053.3.000",
          "token":{ 
             "code":"0009130",
             "areacode":1,
-            "timestamp":"{ts '2020-02-14 14:28:54'}"
+            "timestamp":"{ts '2021-01-21 12:39:08'}"
          },
          "ud":{ 
             "ud13_code":"",

@@ -37,15 +37,16 @@
 * **Success Response:**
 
     ```javascript
-    { 
-       "Code":"TY",
-       "Year":2018,
-       "Immunisation Type":"Typhoid",
-       "token":{ 
-          "imm_code":"TY",
-          "timestamp":"{ts '2020-02-14 09:41:36'}",
-          "studcode":"0009130"
-       }
+    {
+      "Code": "TY",
+      "Year": 2021,
+      "Immunisation Type": "Typhoid",
+      "__tassversion": "01.000.043.0",
+      "token": {
+        "imm_code": "TY",
+        "timestamp": "{ts '2021-01-20 11:17:58'}",
+        "studcode": "0009130"
+      }
     }
     ```
  

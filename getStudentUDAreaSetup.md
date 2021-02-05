@@ -26,7 +26,7 @@
 
    **Optional:**
 
-   none
+   `areacode [number]` - Area Code
  
    **Conditional:**
  
@@ -34,6 +34,7 @@
 
 * **Success Response:**
 
+    when only `includelookups` is supplied
     ```javascript
       { 
          "ud_area":[
@@ -74,16 +75,77 @@
                "area_code":6
             }
          ],
+         "__tassversion": "01.053.3.000",
          "token":{ 
             "includelookups":true,
-            "timestamp":"{ts '2020-02-14 14:44:55'}"
+            "timestamp": "{ts '2021-01-21 12:57:23'}"
          }
       }
+    ```
+
+    when both `areacode` and `includelookups` are supplied
+    ```javascript
+    {
+      "ud_area": [
+        {
+          "eudfld1_desc": "Good at Math",
+          "area_code": 0,
+          "lookups": [],
+          "eudfld1_trig": "Y",
+          "eudfld1_sort": 7
+        },
+        {
+          "eudfld11_sort": 6,
+          "eudfld11_trig": 10,
+          "area_code": 0,
+          "lookups": [
+            {
+              "code": 10,
+              "desc": "Love"
+            },
+            {
+              "code": 2,
+              "desc": "To define this reference data takes many character"
+            },
+            {
+              "code": 5,
+              "desc": "Perspective"
+            },
+            {
+              "code": "QUA",
+              "desc": "Qualitative Program"
+            }
+          ],
+          "eudfld11_desc": "Reference Data"
+        },
+        {
+          "eudfld21_desc": "Comment",
+          "eudfld21_trig": "danke",
+          "area_code": 0,
+          "eudfld21_sort": 5,
+          "lookups": []
+        },
+        {
+          "eudfld22_desc": "Long Trigger",
+          "area_code": 0,
+          "eudfld22_trig": "The quick brown fox jumped over the lazy pig",
+          "lookups": [],
+          "eudfld22_sort": 2
+        }
+      ],
+      "area_code": 0,
+      "__tassversion": "01.053.3.000",
+      "token": {
+        "includelookups": true,
+        "areacode": 0,
+        "timestamp": "{ts '2021-01-21 13:06:00'}"
+      }
+    }
     ```
  
 * **Error Response:**
 
-    `code` not supplied
+    `includelookups` not supplied
     ```javascript
       "__invalid": {
         "includelookups": "field is required"
@@ -93,7 +155,7 @@
 * **Sample Parameters:**
 
   ```javascript
-    {"includelookups":"true"}
+    {"includelookups":"true", "areacode":"0"}
   ```
 
 * **Sample GET:** (With URL Encoded `token`)

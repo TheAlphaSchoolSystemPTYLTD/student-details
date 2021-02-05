@@ -46,6 +46,7 @@
        "has_attachment":true,
        "file":"[Base64 encoded image string]",
        "file_name":"recipients.pdf",
+       "__tassversion": "01.053.3.000",
        "token":{ 
           "note_date":"2019-09-26 11:06:52.0",
           "timestamp":"{ts '2020-02-14 15:08:55'}",
@@ -81,7 +82,7 @@
 * **Sample Parameters:**
 
   ```javascript
-    {"studcode":"0009130","mcond_code":"AST","attach_id":"5F724726-E361-C720-A1160233A4E8893D"}
+    {"studcode":"0009130","note_date":"2019-09-26 11:06:52.0","note_cat":"GEN","attach_id":"2F8F9A77-E2B9-28D5-611EDE1D0A66D623"}
   ```
 
 * **Sample GET:** (With URL Encoded `token`)

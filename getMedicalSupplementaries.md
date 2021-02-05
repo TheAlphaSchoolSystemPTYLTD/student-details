@@ -6,6 +6,8 @@
 
   TASS v52.3 - Method Added
 
+  TASS v53.3 PR TBD - Add a new conditional field `currentstatus`, change the required field `studcode` to a conditional field. Add validation for `studcode` and `currentstatus`.
+
 * **Version:**
 
   3
@@ -22,7 +24,7 @@
 
    **Required:**
  
-   `studcode [string]` - Student Code
+   None
 
    **Optional:**
 
@@ -30,45 +32,124 @@
 
    **Conditional:**
 
-   None
+   `currentstatus [string]` - Required if `studcode` is not supplied. Must be 'current' or 'future' or 'past' or 'noncurrent'.
+ 
+   `studcode [string]` - Required if `currentstatus` is not supplied. Contains Only One Student Code if supplied.
 
 * **Success Response:**
 
+    when only `studcode` is supplied
     ```javascript
-    { 
-       "data":[ 
-          { 
-             "msupp_code":"DEN",
-             "msupp_desc":"Dental Test",
-             "comm_text":"test"
-          },
-          { 
-             "msupp_code":"FIT",
-             "msupp_desc":"Fitness Tests xxxx20",
-             "comm_text":"Andy is a lazy little bludger and hence is quite overweight.  She cannot run further than 20 meters and don't even think of asking her to do something drastic like a situp or starjump.  She needs to x"
-          },
-          { 
-             "msupp_code":"VIS",
-             "msupp_desc":"Vision Tests",
-             "comm_text":"can see stuff with and without her glasses."
-          }
-       ],
-       "token":{ 
-          "timestamp":"{ts '2020-02-14 10:19:49'}",
-          "studcode":"0009130"
-       }
+    {
+      "data": [
+        {
+          "msupp_code": "DEN",
+          "msupp_desc": "Dental Test",
+          "comm_text": "test"
+        },
+        {
+          "msupp_code": "FIT",
+          "msupp_desc": "Fitness Tests xxxx20",
+          "comm_text": "Andy is a lazy little bludger and hence is quite overweight.  She cannot run further than 20 meters and don't even think of asking her to do something drastic like a situp or starjump.  She needs to s"
+        },
+        {
+          "msupp_code": "HEA",
+          "msupp_desc": "Hearing Test",
+          "comm_text": "no"
+        },
+        {
+          "msupp_code": "VIS",
+          "msupp_desc": "Vision Tests",
+          "comm_text": "can see stuff with and without her glasses."
+        }
+      ],
+      "__tassversion": "01.053.3.000",
+      "token": {
+        "timestamp": "{ts '2021-01-21 11:10:39'}",
+        "studcode": "0009130"
+      }
+    }
+
+    ```
+
+    when only `currentstatus` is supplied
+    ```javascript
+    {
+      "data": [
+        {
+          "supplementaries": [
+            {
+              "msupp_code": "DEN",
+              "msupp_desc": "Dental Test",
+              "comm_text": "test"
+            },
+            {
+              "msupp_code": "FIT",
+              "msupp_desc": "Fitness Tests xxxx20",
+              "comm_text": "Andy is a lazy little bludger and hence is quite overweight.  She cannot run further than 20 meters and don't even think of asking her to do something drastic like a situp or starjump.  She needs to s"
+            },
+            {
+              "msupp_code": "HEA",
+              "msupp_desc": "Hearing Test",
+              "comm_text": "no"
+            },
+            {
+              "msupp_code": "VIS",
+              "msupp_desc": "Vision Tests",
+              "comm_text": "can see stuff with and without her glasses."
+            }
+          ],
+          "studcode": "0009130"
+        },
+        {
+          "supplementaries": [
+            {
+              "msupp_code": "HEA",
+              "msupp_desc": "Hearing Test",
+              "comm_text": "Excellent hearing"
+            }
+          ],
+          "studcode": "0009213"
+        }
+      ],
+      "__tassversion": "01.053.3.000",
+      "token": {
+        "timestamp": "{ts '2021-01-21 11:12:38'}",
+        "currentstatus": "current"
+      }
     }
     ```
  
 * **Error Response:**
 
-    `studcode` not supplied
+    `studcode` and `currentstatus` are both not supplied
     ```javascript
-      "error": "studcode is required."
+      "error": "studcode or currentstatus is required."
+    ```
+
+    `studcode` contains more than one student code
+    ```javascript
+      "error": "Only one studcode can be processed at a time."
+    ```
+
+    `studcode` does not exist in `currentstatus` student list
+    ```javascript
+      "error": "[studcode] is not a valid [currentstatus] student."
+    ```
+
+    `currentstatus` does not match 'current' or 'future' or 'past' or 'noncurrent'
+    ```javascript
+      "error": "[currentstatus] must be 'current' or 'future' or 'past' or 'noncurrent'."
     ```
 
 * **Sample Parameters:**
 
+    when `currentstatus` is supplied
+  ```javascript
+    {"currentstatus":"current"}
+  ```
+
+    when `studcode` is supplied
   ```javascript
     {"studcode":"0009130"}
   ```

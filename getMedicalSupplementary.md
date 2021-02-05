@@ -24,7 +24,7 @@
  
     `studcode` [string] - Student Code
     
-    `msupp_desc` [date] - Medical Supplementary Code
+    `msupp_code` [string] - Medical Supplementary Code
 
    **Optional:**
 
@@ -37,15 +37,16 @@
 * **Success Response:**
 
     ```javascript
-    { 
-       "msupp_code":"DEN",
-       "msupp_desc":"Dental Test",
-       "comm_text":"test",
-       "token":{ 
-          "msupp_code":"DEN",
-          "timestamp":"{ts '2020-02-14 10:22:05'}",
-          "studcode":"0009130"
-       }
+    {
+      "msupp_code": "HEA",
+      "msupp_desc": "Hearing Test",
+      "comm_text": "no",
+      "__tassversion": "01.053.3.000",
+      "token": {
+        "msupp_code": "HEA",
+        "timestamp": "{ts '2021-01-21 11:20:09'}",
+        "studcode": "0009130"
+      }
     }
     ```
  
@@ -56,15 +57,15 @@
       "error": "studcode is required."
     ```
 
-    `msupp_desc` not supplied
+    `msupp_code` not supplied
     ```javascript
-      "error": "msupp_desc is required."
+      "error": "msupp_code is required."
     ```
 
 * **Sample Parameters:**
 
   ```javascript
-    {"studcode":"0009130","msupp_code":"DEN"}
+    {"studcode":"0009130","msupp_code":"HEA"}
   ```
 
 * **Sample GET:** (With URL Encoded `token`)
