@@ -6,6 +6,8 @@
 
   TASS v52.3 - Method Added
 
+  TASS v54.0 - Add a new conditional field `currentstatus`, change the required field `studcode` to a conditional field. Add new validations for `studcode` and `currentstatus`.
+
 * **Version:**
 
   3
