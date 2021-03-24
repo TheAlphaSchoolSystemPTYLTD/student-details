@@ -38,70 +38,69 @@
 
 * **Success Response:**
 
-    when `currentstatus` is supplied
+    when only `currentstatus` is supplied
     ```javascript
     {
-      "data":[
+      "data": [
         {
-          "studcode":"0009130",
-          "illness":[
+          "illness": [
             {
-              "ill_time":"1900-01-01 08:49:00.0",
-              "medication_text":"",
-              "host_flg":"N",
-              "mcond_desc":"Accident",
-              "disch_date":"",
-              "mcond_code":"ACC",
-              "ill_date":"2019-04-12 00:00:00.0",
-              "treat_code":"ICE",
-              "disch_time":""
+              "ill_time": "1900-01-01 09:42:00.0",
+              "medication_text": "mIgral 50mg",
+              "host_flg": "N",
+              "mcond_desc": "Migraine",
+              "disch_date": "2015-04-15 00:00:00.0",
+              "mcond_code": "MIG",
+              "ill_date": "2015-03-23 00:00:00.0",
+              "treat_code": "RES",
+              "disch_time": "1900-01-01 15:30:00.0"
             },
             {
-              "ill_time":"1900-01-01 08:49:00.0",
-              "medication_text":"",
-              "host_flg":"N",
-              "mcond_desc":"Accident",
-              "disch_date":"",
-              "mcond_code":"ACC",
-              "ill_date":"2019-04-11 00:00:00.0",
-              "treat_code":"ICE",
-              "disch_time":""
+              "ill_time": "1900-01-01 13:20:00.0",
+              "medication_text": "",
+              "host_flg": "N",
+              "mcond_desc": "Asthma",
+              "disch_date": "2015-04-15 00:00:00.0",
+              "mcond_code": "AST",
+              "ill_date": "2013-07-02 00:00:00.0",
+              "treat_code": "",
+              "disch_time": "1900-01-01 15:30:00.0"
             }
-          ]
+          ],
+          "studcode": "0009069"
         },
         {
-          "studcode":"0009130",
-          "illness":[
+          "illness": [
             {
-              "ill_time":"1900-01-01 08:49:00.0",
-              "medication_text":"",
-              "host_flg":"N",
-              "mcond_desc":"Accident",
-              "disch_date":"",
-              "mcond_code":"ACC",
-              "ill_date":"2019-04-12 00:00:00.0",
-              "treat_code":"ICE",
-              "disch_time":""
+              "ill_time": "1900-01-01 14:52:00.0",
+              "medication_text": "",
+              "host_flg": "N",
+              "mcond_desc": "Asthma",
+              "disch_date": "2016-04-28 00:00:00.0",
+              "mcond_code": "AST",
+              "ill_date": "2016-04-28 00:00:00.0",
+              "treat_code": "",
+              "disch_time": "1900-01-01 15:52:00.0"
             },
             {
-              "ill_time":"1900-01-01 08:49:00.0",
-              "medication_text":"",
-              "host_flg":"N",
-              "mcond_desc":"Accident",
-              "disch_date":"",
-              "mcond_code":"ACC",
-              "ill_date":"2019-04-11 00:00:00.0",
-              "treat_code":"ICE",
-              "disch_time":""
+              "ill_time": "1900-01-01 08:57:00.0",
+              "medication_text": "",
+              "host_flg": "N",
+              "mcond_desc": "Headache",
+              "disch_date": "2015-04-02 00:00:00.0",
+              "mcond_code": "HEA",
+              "ill_date": "2015-04-02 00:00:00.0",
+              "treat_code": "",
+              "disch_time": "1900-01-01 09:57:00.0"
             }
-          ]
-        }
+          ],
+          "studcode": "0009097"
+        },
       ],
-      "__tassversion":"01.000.043.0",
-      "token":{
-        "timestamp":"{ts '2020-11-10 14:24:06'}",
-        "studcode":"0009130",
-        "currentstatus":"current"
+      "__tassversion": "01.053.3.000",
+      "token": {
+        "timestamp": "{ts '2021-01-20 15:18:05'}",
+        "currentstatus": "current"
       }
     }
     ```
@@ -144,8 +143,9 @@
              "disch_time":""
           }
        ],
+       "__tassversion": "01.053.3.000",
        "token":{ 
-          "timestamp":"{ts '2020-02-14 10:02:52'}",
+          "timestamp":"{ts '2021-01-19 15:44:08'}",
           "studcode":"0009130"
        }
     }
@@ -177,17 +177,12 @@
 
     when `currentstatus` is supplied
   ```javascript
-    {
-      "studcode":"0009130",
-      "currentstatus":"current"
-    }
+    {"currentstatus":"current"}
   ```
 
-    when only `studcode` is supplied
+    when `studcode` is supplied
   ```javascript
-    {
-      "studcode":"0009130"
-    }
+    {"studcode":"0009130"}
   ```
 
 * **Sample GET:** (With URL Encoded `token`)

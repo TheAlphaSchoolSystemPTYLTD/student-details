@@ -39,23 +39,24 @@
 * **Success Response:**
 
     ```javascript
-    { 
-       "note_date":"2020-01-29 15:33:12.0",
-       "note_date_time":"2020-01-29 15:33:12.0",
-       "ncat_desc":"General",
-       "note_text":"Testing CNOTE",
-       "entry_code":"fang",
-       "entry_date":"2020-01-29 00:00:00.0",
-       "attach_url":"inline-file.cfm?do=ui.web.note.attachment&note_cat=GEN&note_date=2020-01-29 15:33:12.0&note_num=&entity_type=M&entity_code=0009130&notetype=confidential",
-       "token":{ 
-          "note_date":"2020-01-29 15:33:12.0",
-          "timestamp":"{ts '2020-02-14 11:19:30'}",
-          "studcode":"0009130",
-          "note_cat":"GEN"
-       },
-       "attach_id":"5DEAB58E-EE13-4565-DC8311946B667C6E",
-       "note_cat":"GEN",
-       "note_num":""
+    {
+      "note_cat": "GEN",
+      "note_date": "2018-11-01 12:20:04.0",
+      "note_date_time": "2018-11-01 12:20:04.0",
+      "ncat_desc": "General",
+      "note_num": "",
+      "note_text": "Andy Confidential General note",
+      "entry_code": "tsloman",
+      "entry_date": "2018-11-01 00:00:00.0",
+      "attach_id": ""
+      "attach_url": "",
+      "__tassversion": "01.053.3.000",
+      "token": {
+        "note_date": "2018-11-01 12:20:04.000",
+        "timestamp": "{ts '2021-01-20 11:13:31'}",
+        "studcode": "0009130",
+        "note_cat": "GEN"
+      }
     }
     ```
  
@@ -79,7 +80,7 @@
 * **Sample Parameters:**
 
   ```javascript
-    {"studcode":"0009130","note_cat":"APE","note_date":"2019-05-30 15:11:58.0"}
+    {"studcode":"0009130","note_cat":"GEN","note_date":"2018-11-01 12:20:04.000"}
   ```
 
 * **Sample GET:** (With URL Encoded `token`)
