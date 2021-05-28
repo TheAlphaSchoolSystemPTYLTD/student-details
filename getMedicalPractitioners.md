@@ -6,7 +6,7 @@
 
   TASS v52.3 - Method Added
 
-  TASS v53.3 PR TBD - Add a new conditional field `currentstatus`, change the required field `studcode` to a conditional field. Add validation for `studcode` and `currentstatus`.
+  TASS v54.0 - Add a new conditional field `currentstatus`, change the required field `studcode` to a conditional field. Add new validations for `studcode` and `currentstatus`.
 
 * **Version:**
 
@@ -23,7 +23,7 @@
 *  **Params:**
 
    **Required:**
- 
+
    None
 
    **Optional:**
@@ -32,87 +32,87 @@
 
    **Conditional:**
 
-   `currentstatus [string]` - Required if `studcode` is not supplied. Must be 'current' or 'future' or 'past' or 'noncurrent'.
+    `currentstatus [string]` - Required if `studcode` is not supplied. Must be 'current' or 'future' or 'past' or 'noncurrent'.
  
-   `studcode [string]` - Required if `currentstatus` is not supplied. Contains Only One Student Code if supplied.
+    `studcode [string]` - Required if `currentstatus` is not supplied. Contains Only One Student Code if supplied.
 
 * **Success Response:**
+
+    when `currentstatus` is supplied
+    ```javascript
+    {
+        "data":[
+            {
+                "practitioners":[
+                    {
+                        "ptype_code":"SUR",
+                        "doct_phone":"8435889727349068572934867",
+                        "doct_name":"Dr U R A Fish",
+                        "ptype_desc":"General Surgeon",
+                        "prac_num":7
+                    },
+                    {
+                        "ptype_code":"006",
+                        "doct_phone":"3569 4569",
+                        "doct_name":"Dr Zuess",
+                        "ptype_desc":"Psychiatrist",
+                        "prac_num":3
+                    }
+                ],
+                "studcode":"0009130"
+            },
+            {
+                "practitioners":[
+                    {
+                        "ptype_code":"002",
+                        "doct_phone":"07 3987 4563",
+                        "doct_name":"Dr Zuess J",
+                        "ptype_desc":"Doctor",
+                        "prac_num":1
+                    },
+                    {
+                        "ptype_code":"002",
+                        "doct_phone":"",
+                        "doct_name":"Dr Godspeed",
+                        "ptype_desc":"Doctor",
+                        "prac_num":3
+                    }
+                ],
+                "studcode":"0009134"
+            }
+        ],
+        "__tassversion":"01.000.043.0",
+        "token":{
+            "timestamp":"{ts '2020-11-11 14:41:13'}",
+            "currentstatus":"current"
+        }
+    }
+    ```
 
     when only `studcode` is supplied
     ```javascript
     {
-      "data": [
-        {
-        "ptype_code": "003",
-        "doct_phone": "(02) 3569 7812 xxxxxxxend",
-        "doct_name": "Dr Alexander Sebasti Millhouse",
-        "ptype_desc": "Chiropractor",
-        "prac_num": 2
-        },
-        {
-        "ptype_code": "003",
-        "doct_phone": "wqergf",
-        "doct_name": "qwerf",
-        "ptype_desc": "Chiropractor",
-        "prac_num": 16
-        }
-      ],
-      "__tassversion": "01.053.3.000",
-      "token": {
-      "timestamp": "{ts '2021-01-20 17:24:27'}",
-      "studcode": "0009130"
-      }
-    }
-    ```
-
-    when only `currentstatus` is supplied
-    ```javascript
-    {
-      "data": [
-        {
-          "practitioners": [
+        "data":[
             {
-              "ptype_code": "003",
-              "doct_phone": "07 33550643",
-              "doct_name": "Dr George Quinn Phd",
-              "ptype_desc": "Chiropractor",
-              "prac_num": 1
+                "ptype_code":"SUR",
+                "doct_phone":"8435889727349068572934867",
+                "doct_name":"Dr U R A Fish",
+                "ptype_desc":"General Surgeon",
+                "prac_num":7
             },
             {
-              "ptype_code": "003",
-              "doct_phone": "0423 679 908",
-              "doct_name": "Dr G M Quinn",
-              "ptype_desc": "Chiropractor",
-              "prac_num": 2
+                "ptype_code":"006",
+                "doct_phone":"3569 4569",
+                "doct_name":"Dr Zuess",
+                "ptype_desc":"Psychiatrist",
+                "prac_num":3
             }
-          ],
-          "studcode": "0009069"
-        },
-        {
-          "practitioners": [
-            {
-              "ptype_code": "003",
-              "doct_phone": "+61 7 3841 1475",
-              "doct_name": "Dr Cathy Louise McMillan",
-              "ptype_desc": "Chiropractor",
-              "prac_num": 2
-            },
-            {
-              "ptype_code": "001",
-              "doct_phone": "+61 7 3841 4542",
-              "doct_name": "Mr Keith Daniel Farthing",
-              "ptype_desc": "Dentist",
-              "prac_num": 1
-            }
-          ],
-          "studcode": "0009213"
+        ],
+        "__tassversion":"01.000.043.0",
+        "token":{
+            "timestamp":"{ts '2020-11-11 14:37:18'}",
+            "studcode":"0009130"
         }
-      ],
-      "__tassversion": "01.053.3.000",
-      "token": {
-        "timestamp": "{ts '2021-01-21 11:04:57'}",
-        "currentstatus": "current"
-      }
     }
     ```
  
@@ -142,18 +142,22 @@
 
     when `currentstatus` is supplied
   ```javascript
-    {"currentstatus":"current"}
+    {
+      "currentstatus":"current"
+    }
   ```
 
-    when `studcode` is supplied
+    when only `studcode` is supplied
   ```javascript
-    {"studcode":"0009130"}
+    {
+      "studcode":"0009130"
+    }
   ```
 
 * **Sample GET:** (With URL Encoded `token`)
 
   ```HTML
-    http://api.tasscloud.com.au/tassweb/api/?method=getMedicalPractitioners&appcode=API10&company=10&v=3&token=l1D8owEn111IHcXLRwXTB0oU2GX6rj%2BISqa9zXA8We3J3mwgjW5pdUvFK3%2FIZ4mJ4bMyfKTmEoup%2B3tTE9GeLQ%3D%3D
+    http://api.tasscloud.com.au/tassweb/api/?method=getMedicalPractitioners&appcode=API12&company=10&v=3&token=l1D8owEn111IHcXLRwXTB0oU2GX6rj%2BISqa9zXA8We3J3mwgjW5pdUvFK3%2FIZ4mJ4bMyfKTmEoup%2B3tTE9GeLQ%3D%3D
   ```
   
 * **Sample POST:**
@@ -161,7 +165,7 @@
   ```HTML
     <form id="postForm" name="postForm" method="POST" action="http://api.tasscloud.com.au/tassweb/api/">
        <input type="hidden" name="method" value="getMedicalPractitioners">
-       <input type="hidden" name="appcode" value="API10">
+       <input type="hidden" name="appcode" value="API12">
        <input type="hidden" name="company" value="10">
        <input type="hidden" name="v" value="3">
        <textarea name="token">l1D8owEn111IHcXLRwXTB0oU2GX6rj+ISqa9zXA8We3J3mwgjW5pdUvFK3/IZ4mJ4bMyfKTmEoup+3tTE9GeLQ==</textarea>
