@@ -7,6 +7,8 @@
   TASS v51.4 - Update Version History to include three added params `pc_tutor_group`, `class`, `year_group`.
 
   TASS v52.0 - Return 3 new fields `preferred_surname`, `first_name`, `other_name` in general_details.
+  
+  TASS v54.4 - Return 1 new fields `multiparent_flag` in general_details.
 
 * **Version:**
 
@@ -72,7 +74,8 @@
               "date_of_entry": "31/03/2018",
               "date_of_birth": "02/09/1994",
               "alternate_id": "%BDMITC?",
-              "given_names": "Andréa Joan"
+              "given_names": "Andréa Joan",
+	      	  "multipar_flg ": "Y"
             },
             "school_details": {
               "campus": "Banana Cmpy 10 Campus",
@@ -114,7 +117,7 @@
             }
           }
         ],
-         "__tassversion": "01.053.3.000",
+         "__tassversion": "01.054.4.000",
         "token": {
         "code": "0009130",
         "timestamp": "{ts '2021-01-21 12:08:49'}",
