@@ -79,7 +79,7 @@
             },
             "school_details": {
               "campus": "Banana Cmpy 10 Campus",
-              "email_address": "jason.jiang@tassweb.com.au",
+              "email_address": "testing@tassweb.com.au",
               "pc_tutor_group": "9DD",
               "boarder": "Yes",
               "student_cafe_access": "Yes",
