@@ -81,7 +81,7 @@
                 "f_title": "",
                 "f_first_name": "Edward",
                 "addressee": "Paula Clark",
-                "email": "peterr@tassweb.com.au; realripper@tpg.com.au",
+                "email": "tester@tassweb.com.au",
                 "business_phone": "3201 1302",
                 "parent_code": "000055",
                 "current_address": "Mrs P Clarké Second Line<br />123 Smith Rd<br />the bag end of nowhere<br />ALBION NT 4005<br />AUSTRALIA",
