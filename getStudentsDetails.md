@@ -10,6 +10,9 @@
   
   TASS v54.4 - Return 1 new fields `multiparent_flag` in general_details.
 
+  TASS v55.3 - Return 2 new fields `last_update_on`, `last_update_by` in general_details.
+               Add params `update_on_from`, `update_on_to`, `update_on`.
+
 * **Version:**
 
 	3
@@ -44,6 +47,12 @@
 
 	`year_group [string]` -  Numeric Year Group Value.
 
+  `update_on_from` - Date for comparison with the last update date. Data that is greater than `update_on_from` is considered.
+
+  `update_on_to` - Date for comparison with the last update date. Data that is less than `update_on_from` is considered.
+
+  `update_on` - Date for comparison with the last update date. Data that exact match on `update_on_from` is considered.
+
 	**Conditional:**
 
 	none
@@ -75,7 +84,9 @@
               "date_of_birth": "02/09/1994",
               "alternate_id": "%BDMITC?",
               "given_names": "Andréa Joan",
-	      	  "multipar_flg ": "Y"
+	      	    "multipar_flg ": "Y",
+              "last_update_on": "25/03/2021 04:37:50 PM",
+              "last_update_by": "Admin"
             },
             "school_details": {
               "campus": "Banana Cmpy 10 Campus",
@@ -117,10 +128,10 @@
             }
           }
         ],
-         "__tassversion": "01.054.4.000",
+         "__tassversion": "01.055.3.000",
         "token": {
         "code": "0009130",
-        "timestamp": "{ts '2021-01-21 12:08:49'}",
+        "timestamp": "{ts '2021-07-27 12:08:49'}",
         "currentstatus": "current"
         }
       }
