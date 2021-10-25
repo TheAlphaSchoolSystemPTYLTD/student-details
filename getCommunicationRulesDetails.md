@@ -10,6 +10,8 @@
 
   TASS v52.0 - Return 16 new fields `m_description`, `m_title`, `m_initials`, `m_surname`, `m_first_name`, `m_other_name`, `m_preferred_name`, `m_suffix`, `f_description`, `f_title`, `f_initials`, `f_surname`, `f_first_name`, `f_other_name`, `f_preferred_name`, `f_suffix` for each address.
 
+  TASS v55.4 (PR3) - Return 4 new fields `address_person_posn`, `address_person_label`, `address_person_gender`, `address_person_gender_desc` for each address.
+
 * **Version:**
 
   3
@@ -89,7 +91,11 @@
                 "home_phone": "3870 9987",
                 "relationship": "Step",
                 "tag": "Student Lives With / Emergency Contact",
-                "facsimile": "375575756576"
+                "facsimile": "375575756576",
+                "address_person_label":"Mother/Parent 1",
+                "address_person_posn":1,
+                "address_person_gender_desc":"Female",
+                "address_person_gender":"F"
               }
             ],
             "studcode": "0009130"
