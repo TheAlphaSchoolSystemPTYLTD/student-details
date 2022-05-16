@@ -41,30 +41,6 @@
     when `currentstatus` is supplied
     ```javascript
     {
-      "data": [
-        {
-          "last_occ_date": "2018-01-30 00:00:00.0",
-          "mcond_desc": "Accident",
-          "mcond_code": "ACC",
-          "severe_ind": "N"
-        },
-        {
-          "last_occ_date": "2016-01-31 00:00:00.0",
-          "mcond_desc": "Anaphylaxis",
-          "mcond_code": "ANA",
-          "severe_ind": "Y"
-        }
-      ],
-      "token": {
-        "timestamp": "{ts '2020-02-13 16:56:20'}",
-        "studcode": "0009130"
-      }
-    }
-    ```
-
-    when only `studcode` is supplied
-    ```javascript
-    {
         "data":[
             {
                 "studcode":"0009130",
@@ -100,6 +76,30 @@
             "timestamp":"{ts '2020-11-11 14:01:03'}",
             "currentstatus":"current"
         }
+    }
+    ```
+
+    when only `studcode` is supplied
+    ```javascript
+    {
+      "data": [
+        {
+          "last_occ_date": "2018-01-30 00:00:00.0",
+          "mcond_desc": "Accident",
+          "mcond_code": "ACC",
+          "severe_ind": "N"
+        },
+        {
+          "last_occ_date": "2016-01-31 00:00:00.0",
+          "mcond_desc": "Anaphylaxis",
+          "mcond_code": "ANA",
+          "severe_ind": "Y"
+        }
+      ],
+      "token": {
+        "timestamp": "{ts '2020-02-13 16:56:20'}",
+        "studcode": "0009130"
+      }
     }
     ```
  
