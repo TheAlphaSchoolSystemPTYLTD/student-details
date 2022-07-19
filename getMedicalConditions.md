@@ -8,7 +8,7 @@
 
   TASS v54.0 - Add a new conditional field `currentstatus`, change the required field `studcode` to a conditional field. Add new validations for `studcode` and `currentstatus`.
 
-  TASS v56.5 - Add a new optional field `includemedication`, new return data `general_note`.
+  TASS v57.7.200 - Add a new optional field `includemedication`, new return data `general_note`.
                Add a conditional return data `medication_requirements` within `medconditions` array
 
 * **Version:**
