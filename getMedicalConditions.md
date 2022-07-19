@@ -8,7 +8,7 @@
 
   TASS v54.0 - Add a new conditional field `currentstatus`, change the required field `studcode` to a conditional field. Add new validations for `studcode` and `currentstatus`.
 
-  TASS v56.5 - Add a new optional field `includemedication`, new return data `general_note` within `medconditions` array.
+  TASS v56.5 - Add a new optional field `includemedication`, new return data `general_note`.
                Add a conditional return data `medication_requirements` within `medconditions` array
 
 * **Version:**
@@ -49,13 +49,15 @@
           "last_occ_date": "2018-01-30 00:00:00.0",
           "mcond_desc": "Accident",
           "mcond_code": "ACC",
-          "severe_ind": "N"
+          "severe_ind": "N",
+          "general_note": "Must not have running exercise"
         },
         {
           "last_occ_date": "2016-01-31 00:00:00.0",
           "mcond_desc": "Anaphylaxis",
           "mcond_code": "ANA",
-          "severe_ind": "Y"
+          "severe_ind": "Y",
+          "general_note": "Has suffered Anaphylaxis since birth."
         }
       ],
       "token": {
@@ -108,7 +110,7 @@
         }
     }
     ```
-    when `currentstatus` is supplied and `includemedication` is supplied as 'true'
+    when `currentstatus` or `studcode` is supplied and `includemedication` is supplied as 'true'
     ```javascript
     {
       "data": [
@@ -176,14 +178,14 @@
     }
   ```
 
-    when only `studcode` is supplied
+    when `studcode` is supplied
   ```javascript
     {
       "studcode":"0009130"
     }
   ```
 
-      when `currentstatus` is supplied and `includemedication` is supplied
+    when `currentstatus` or `studcode` supplied and `includemedication` is supplied
   ```javascript
     {
       "currentstatus":"current"
