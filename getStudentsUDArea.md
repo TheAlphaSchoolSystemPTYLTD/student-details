@@ -128,7 +128,7 @@
           "update_on":""
         }
       ],
-      "__tassversion":"01.054.4.000",
+      "__tassversion":"01.057.10.100",
       "token":{
         "areacode":1,
         "timestamp":"{ts '2022-08-17 21:54:36'}",
