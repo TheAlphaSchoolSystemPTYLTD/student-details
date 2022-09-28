@@ -12,6 +12,8 @@
 
   TASS v55.4 (PR3) - Return 4 new fields `address_person_posn`, `address_person_label`, `address_person_gender`, `address_person_gender_desc` for each address.
 
+  TASS v57.11 - Add `add_num`, `m_person_num`,`f_person_num` in returned data
+
 * **Version:**
 
   3
@@ -54,59 +56,105 @@
 
     ```javascript
       {
-        "commrules": [
+        "commrules":[
           {
-            "addresses": [
+            "addresses":[
               {
-                "communication_type": "EC,GEN,LW,TKCO",
-                "mobile_phone_2": "",
-                "adressee": "Paula Clark",
-                "sms_flg_2": "N",
-                "m_initials": "P",
-                "m_suffix": "suf",
-                "m_surname": "Clark",
-                "m_description": "Mother/Parent 1",
-                "m_preferred_name": "Paula",
-                "m_other_name": "PauOth",
-                "m_title": "Mrs",
-                "m_first_name": "Paula",
-                "address_description": "Mother/Parent 1",
-                "email_2": "",
-                "mobile_phone_1": "0427203657",
-                "sms_flg_1": "Y",
-                "f_initials": "E",
-                "f_suffix": "",
-                "f_surname": "Clark",
-                "f_description": "Father/Parent 2",
-                "f_preferred_name": "Edward",
-                "f_other_name": "",
-                "f_title": "",
-                "f_first_name": "Edward",
-                "addressee": "Paula Clark",
-                "email": "tester@tassweb.com.au",
-                "business_phone": "3201 1302",
-                "parent_code": "000055",
-                "current_address": "Mrs P Clarké Second Line<br />123 Smith Rd<br />the bag end of nowhere<br />ALBION NT 4005<br />AUSTRALIA",
-                "salutation": "Mrs Clark (Mother 6)",
-                "home_phone": "3870 9987",
-                "relationship": "Step",
-                "tag": "Student Lives With / Emergency Contact",
-                "facsimile": "375575756576",
+                "communication_type":"TK",
+                "add_num":6,
+                "sms_flg_2":"N",
+                "email_2":"mother2@tassweb.com.au",
+                "sms_flg_1":"Y",
+                "m_initials":"P",
+                "f_preferred_name":"Edward",
+                "addressee":"Paula Other and even more names that thomas the Tank Clark",
+                "email":"mother@tassweb.com.au",
+                "m_preferred_name":"Paula",
+                "m_person_num":30,
+                "business_phone":"3201 1302",
+                "address_person_gender_desc":"Female",
+                "salutation":"Mrs Clark (Mother 6)",
+                "m_title":"Ms",
+                "m_suffix":"MA",
+                "f_suffix":"PA",
+                "home_phone":"3870 9987",
                 "address_person_label":"Mother/Parent 1",
                 "address_person_posn":1,
-                "address_person_gender_desc":"Female",
-                "address_person_gender":"F"
+                "f_surname":"Clark",
+                "mobile_phone_2":"yeah yeah",
+                "f_initials":"E",
+                "adressee":"Paula Other and even more names that thomas the Tank Clark",
+                "address_description":"Mother/Parent 1",
+                "mobile_phone_1":"0412016500",
+                "f_description":"Father/Parent 2",
+                "f_other_name":"Other",
+                "m_first_name":"Paula",
+                "f_title":"Mr",
+                "parent_code":"000055",
+                "m_description":"Mother/Parent 1",
+                "current_address":"Mrs P Clarke Second Line<br />Gigi Lodge<br />Unit 810<br />24 Augustus Street<br />TOOWONG QLD 4066",
+                "m_other_name":"Other and even more names that thomas the Tank",
+                "f_first_name":"Edward",
+                "m_surname":"Clark",
+                "f_person_num":29,
+                "relationship":"Biological",
+                "tag":"",
+                "address_person_gender":"F",
+                "facsimile":"375575756576"
+              },
+              {
+                "communication_type":"TK",
+                "add_num":7,
+                "sms_flg_2":"Y",
+                "email_2":"father2@tassweb.com.au",
+                "sms_flg_1":"N",
+                "m_initials":"P",
+                "f_preferred_name":"Edward",
+                "addressee":"Edward Edward Clark",
+                "email":"father@tassweb.com.au",
+                "m_preferred_name":"Paula",
+                "m_person_num":30,
+                "business_phone":"33201 1301",
+                "address_person_gender_desc":"Male",
+                "salutation":"Mr Clark (Father 7)",
+                "m_title":"Ms",
+                "m_suffix":"MA",
+                "f_suffix":"PA",
+                "home_phone":"3870 9987",
+                "address_person_label":"Father/Parent 2",
+                "address_person_posn":2,
+                "f_surname":"Clark",
+                "mobile_phone_2":"0412016500",
+                "f_initials":"E",
+                "adressee":"Edward Edward Clark",
+                "address_description":"Father/Parent 2",
+                "mobile_phone_1":"",
+                "f_description":"Father/Parent 2",
+                "f_other_name":"Other",
+                "m_first_name":"Paula",
+                "f_title":"Mr",
+                "parent_code":"000055",
+                "m_description":"Mother/Parent 1",
+                "current_address":"Mr E.&R Clark# A.K.A %%Wellington<br />Somerset Park<br />Unit 54<br />2-4 Langport Parade<br />MUDGEERABA QLD 4213",
+                "m_other_name":"Other and even more names that thomas the Tank",
+                "f_first_name":"Edward",
+                "m_surname":"Clark",
+                "f_person_num":29,
+                "relationship":"Former",
+                "tag":"",
+                "address_person_gender":"M",
+                "facsimile":"33201 5545"
               }
             ],
-            "studcode": "0009130"
+            "studcode":"0009130"
           }
         ],
-        "__tassversion": "01.053.3.000",
-        "token": {
-          "code": "0009130",
-          "commtype": "all",
-          "timestamp": "{ts '2019-11-27 14:17:27'}",
-          "currentstatus": "current"
+        "__tassversion": "01.057.11.000",
+        "token":{
+          "code":"0009130",
+          "commtype":"all",
+          "timestamp":"{ts '2022-09-28 11:44:31'}",
+          "currentstatus":"current"
         }
       }
     ```
