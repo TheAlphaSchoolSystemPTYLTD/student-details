@@ -14,6 +14,8 @@
 
   TASS v57.11 - Add `add_num`, `m_person_num`,`f_person_num` in returned data
 
+  TASS v58.01 - Add `m_deceased_flg`, `f_deceased_flg` in returned data
+  
 * **Version:**
 
   3
@@ -63,12 +65,14 @@
                 "communication_type":"TK",
                 "add_num":6,
                 "sms_flg_2":"N",
+                "f_deceased_flg ": "N",
                 "email_2":"mother2@tassweb.com.au",
                 "sms_flg_1":"Y",
                 "m_initials":"P",
                 "f_preferred_name":"Edward",
                 "addressee":"Paula Other and even more names that thomas the Tank Clark",
                 "email":"mother@tassweb.com.au",
+                "m_deceased_flg ": "N",
                 "m_preferred_name":"Paula",
                 "m_person_num":30,
                 "business_phone":"3201 1302",
@@ -106,12 +110,14 @@
                 "communication_type":"TK",
                 "add_num":7,
                 "sms_flg_2":"Y",
+                "f_deceased_flg ": "N",
                 "email_2":"father2@tassweb.com.au",
                 "sms_flg_1":"N",
                 "m_initials":"P",
                 "f_preferred_name":"Edward",
                 "addressee":"Edward Edward Clark",
                 "email":"father@tassweb.com.au",
+                "m_deceased_flg ": "N",
                 "m_preferred_name":"Paula",
                 "m_person_num":30,
                 "business_phone":"33201 1301",
