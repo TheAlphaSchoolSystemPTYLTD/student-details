@@ -47,11 +47,11 @@
 
 	`year_group [string]` -  Numeric Year Group Value.
 
-  `update_on_from` - Date for comparison with the last update date. Data that is greater than `update_on_from` is considered.
+	`update_on_from` - Date for comparison with the last update date. Data that is greater than `update_on_from` is considered.
 
-  `update_on_to` - Date for comparison with the last update date. Data that is less than `update_on_from` is considered.
+	`update_on_to` - Date for comparison with the last update date. Data that is less than `update_on_from` is considered.
 
-  `update_on` - Date for comparison with the last update date. Data that exact match on `update_on_from` is considered.
+	`update_on` - Date for comparison with the last update date. Data that exact match on `update_on_from` is considered.
 
 	**Conditional:**
 
