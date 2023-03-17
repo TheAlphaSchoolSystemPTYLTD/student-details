@@ -29,7 +29,7 @@
 
 	**Required:**
 
-	`currentstatus [string]` -  Must be 'current' or 'future' or 'past' or 'noncurrent'
+	`currentstatus [string]` -  Must be 'current' or 'future' or 'past' or 'noncurrent'.
 
 	**Optional:**
 
