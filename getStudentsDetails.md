@@ -62,11 +62,11 @@
     [^1]: value can change depends on the location of the school 
 		| State      | Value |
 		| ----------- | ----------- |
-		| QLD      | LUI Number       |
-		| NSW   | NESA ID        |
-		| VIC      | VSN Number       |
-		| TAS   | TASC Number        |
-		| WA   | WA Student Number        |
+		| QLD      | lui_number       |
+		| NSW   | nesa_id        |
+		| VIC      | vsn_number       |
+		| TAS   | tasc_number        |
+		| WA   | wa_student_number        |
 
     ```json
       {
