@@ -58,8 +58,17 @@
 	none
 
 * **Success Response:**
+    > *lui_number*[^1] 
+    [^1]: value can change depends on the location of the school 
+		| State      | Value |
+		| ----------- | ----------- |
+		| QLD      | LUI Number       |
+		| NSW   | NESA ID        |
+		| VIC      | VSN Number       |
+		| TAS   | TASC Number        |
+		| WA   | WA Student Number        |
 
-    ```javascript
+    ```json
       {
         "students": [
           {
