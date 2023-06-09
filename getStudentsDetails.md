@@ -37,7 +37,7 @@
 
 	`includephoto [boolean]` -  Must be 'true' or 'false' for whether returning student photo.
 
-	`thumbnail [boolean]` -  Must be 'true' or 'false' for whether returning student thumbnail photo.
+	`thumbnail [boolean]` -  Must be 'true' or 'false' for whether returning student thumbnail photo. (includephoto must also be 'true')
 
 	`campus [string]` -  Campus Code.
 
