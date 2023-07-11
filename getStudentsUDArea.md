@@ -80,8 +80,7 @@
           "ud8_flg":"",
           "ud17_code":"",
           "ud36_date":"",
-          "ud39_date":"",
-          "update_on":"2021-03-23 17:00:00.0"
+          "ud39_date":""
         },
         {
           "ud13_code":"",
@@ -124,8 +123,7 @@
           "ud8_flg":"",
           "ud17_code":"",
           "ud36_date":"",
-          "ud39_date":"",
-          "update_on":""
+          "ud39_date":""
         }
       ],
       "__tassversion":"01.057.10.100",
