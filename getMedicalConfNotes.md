@@ -14,7 +14,7 @@
 
 * **Permission:**
 
-  Medical Setup > Student Medical > Confidential Notes tab > View
+  Medical Records > Student Medical > Confidential Notes tab > View
 
 * **Method:**
 
