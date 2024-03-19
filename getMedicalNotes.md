@@ -14,7 +14,7 @@
 
 * **Permission:**
 
-  Medical Setup > Medical Records > Student Medical > Notes tab > View
+  Medical Records > Student Medical > Notes tab > View
 
 * **Method:**
 
