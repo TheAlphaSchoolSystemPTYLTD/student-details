@@ -14,7 +14,7 @@
 
 * **Permission:**
 
-  Medical Setup > Student Medical > Practitioners tab > View
+  Medical Records > Student Medical > Practitioners tab > View
 
 * **Method:**
 
