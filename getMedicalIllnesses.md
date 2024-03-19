@@ -14,7 +14,7 @@
 
 * **Permission:**
 
-  Medical Setup > Student Medical > Student Illness/Daily Log > View
+  Medical Records > Student Illness/Daily Log > View
 
 * **Method:**
 
