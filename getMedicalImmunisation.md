@@ -12,7 +12,7 @@
 
 * **Permission:**
 
-  Medical Setup > Student Medical > Immunisations tab > View
+  Medical Records > Student Medical > Immunisations tab > View
 
 * **Method:**
 
