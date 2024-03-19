@@ -12,7 +12,7 @@
 
 * **Permission:**
 
-  Students > UD Areas tab > View
+  Student Records > Students > UD Areas tab > View
 
 * **Method:**
 
