@@ -14,7 +14,7 @@
 
 * **Permission:**
 
-  Medical Setup > Student Medical > View
+  Medical Records > Student Medical > View
 
 * **Method:**
 
