@@ -14,7 +14,7 @@
 
 * **Permission:**
 
-  Student Records > Students > MCEECDYA (tab)
+  Student Records > Students > MCEECDYA tab
 
 * **Method:**
 
