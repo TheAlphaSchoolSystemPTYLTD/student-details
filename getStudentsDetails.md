@@ -19,7 +19,7 @@
 
 * **Permission:**
 
-  Student Record > Students > View
+  Student Records > Students > View
 
 * **Method:**
 
