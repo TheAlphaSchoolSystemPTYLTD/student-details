@@ -12,7 +12,7 @@
 
 * **Permission:**
 
-  Medical Setup > Student Medical > Supplementary Info tab > View
+  Medical Records > Student Medical > Supplementary Info tab > View
 
 * **Method:**
 
