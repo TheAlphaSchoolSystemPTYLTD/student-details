@@ -12,7 +12,7 @@
 
 * **Permission:**
 
-  Student Records > Students > View
+  Student Records > Student Records Setup > View
 
 * **Method:**
 
