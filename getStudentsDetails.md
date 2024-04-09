@@ -13,6 +13,8 @@
   TASS v55.3 - Return 2 new fields `last_update_on`, `last_update_by` in general_details.
                Add params `update_on_from`, `update_on_to`, `update_on`.
 
+  TASS v59.5 - Allow list of student codes to be provided for input parameter 'code'. Make 'currentstatus' input parameter optional. Add new parameter validation - 'currentstatus' or 'code' must be provided, both cannot be blank.
+
 * **Version:**
 
 	3
@@ -27,13 +29,11 @@
 
 *  **Params:**
 
-	**Required:**
-
-	`currentstatus [string]` -  Must be 'current' or 'future' or 'past' or 'noncurrent'.
-
 	**Optional:**
 
-	`code [string]` - Student code
+	`currentstatus [string]` -  Must be 'current', 'future', 'past' or 'noncurrent'.
+
+	`code [string]` - Single student code or comma delimited list of student codes.
 
 	`includephoto [boolean]` -  Must be 'true' or 'false' for whether returning student photo.
 
@@ -55,7 +55,9 @@
 
 	**Conditional:**
 
-	none
+	'code' must be provided if 'currentstatus' is blank.
+
+	'currenstatus' must be provided if 'code' is blank.
 
 * **Success Response:**
     > *lui_number*[^1] 
@@ -148,14 +150,14 @@
  
 * **Error Response:**
 
-    `currentstatus` not supplied
+    `currentstatus` or `code` must be provided
     ```javascript
     __invalid: {
-      "currentstatus": "field is required"
+      "currentstatus": "currentstatus or code must be provided"
     }
     ```
 
-    `currentstatus` not be 'current' or 'future' or 'past' or 'noncurrent'
+    `currentstatus` must be 'current' or 'future' or 'past' or 'noncurrent'
     ```javascript
     __invalid: {
       "currentstatus": "Current Status must be 'current' or 'future' or 'past' or 'noncurrent'."
