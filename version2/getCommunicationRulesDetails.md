@@ -39,6 +39,8 @@
    **Optional:**
 
    `code [string]` - Student code
+
+    `useoptimised [boolean]` - Use optimised version of the code for better performance (default is true)
  
    **Conditional:**
  
