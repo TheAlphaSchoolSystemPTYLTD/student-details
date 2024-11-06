@@ -15,6 +15,8 @@
   TASS v57.11 - Add `add_num`, `m_person_num`,`f_person_num` in returned data
 
   TASS v58.01 - Add `m_deceased_flg`, `f_deceased_flg` in returned data
+
+  TASS v59.12 - Add `addr1`, `addr2`, `addr3`, `country`, `post_code`, `state_code`, `town_sub`, `call_order`
   
 * **Version:**
 
@@ -106,7 +108,15 @@
                 "relationship":"Biological",
                 "tag":"",
                 "address_person_gender":"F",
-                "facsimile":"375575756576"
+                "facsimile":"375575756576",
+                "addr1": "Gigi Lodge",
+                "addr2": "Unit 810",
+                "addr3": "25 Augustus Street",
+                "country": "",
+                "post_code": 4066,
+                "state_code": "QLD",
+                "town_sub": "TOOWONG",
+                "call_order": ""
               },
               {
                 "communication_type":"TK",
@@ -151,7 +161,15 @@
                 "relationship":"Former",
                 "tag":"",
                 "address_person_gender":"M",
-                "facsimile":"33201 5545"
+                "facsimile":"33201 5545",
+                "addr1": "Somerset Park",
+                "addr2": "Unit 54",
+                "addr3": "2-4 Langport Parade",
+                "country": "",
+                "post_code": 4213,
+                "state_code": "QLD",
+                "town_sub": "MUDGEERABA",
+                "call_order": ""
               }
             ],
             "studcode":"0009130"
