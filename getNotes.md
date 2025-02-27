@@ -1,6 +1,6 @@
 **getNotes**
 ----
-  Returns an array of all structured student medical notes details data in JSON format.
+  Returns an array of all structured student general notes details data in JSON format.
   
 * **Version History:**
 
