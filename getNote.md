@@ -1,6 +1,6 @@
 **getNote**
 ----
-  Returns a structured student medical condition details data in JSON format.
+  Returns a structured student general note details data in JSON format.
   
 * **Version History:**
 
@@ -24,9 +24,9 @@
  
    `studcode [string]` - Student Code
 
-   `note_cat [string]` - Medical Note Category
+   `note_cat [string]` - Note Category
 
-   `note_date [string]` - Medical Note Date
+   `note_date [string]` - Note Date
 
    **Optional:**
 
